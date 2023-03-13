@@ -40,6 +40,13 @@ btnEl.addEventListener('click', function() {
 
     if (guest) {
         alert('sei invitato')
+        const pcNumber = Math.floor(Math.random() * 6) + 1;
+        const userNumber = Math.floor(Math.random() * 6) + 1;
+        if (userNumber > pcNumber) {
+            alert('hai vinto')
+        } else {
+            alert('hai perso')
+        }
     } else {
         alert('non sei invitato')
     }
@@ -50,5 +57,15 @@ btnEl.addEventListener('click', function() {
 /* Generare un numero random da 1 a 6, sia per il giocatore sia per il computer. Stabilire il vincitore, in base a chi fa il punteggio più alto. */
 
 
-const pcNumber = Math.floor(Math.random() * 6) + 1;
-console.log(pcNumber)
+/* const pcNumber = Math.floor(Math.random() * 6) + 1;
+console.log(pcNumber, 'pc')
+
+const userNumber = Math.floor(Math.random() * 6) + 1;
+console.log(userNumber, 'utente')
+
+if (userNumber > pcNumber) {
+    alert('hai vinto')
+} else {
+    alert('hai perso')
+} */
+
