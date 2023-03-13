@@ -31,20 +31,17 @@ btnEl.addEventListener('click', function() {
 
     emailUser = document.getElementById('email').value
 
-    let i;
-    for ( let i = 0; i < class91.length; i++) {
-        console.log(class91[i])
+    let guest = false;
+    for( let i = 0; i < class91.length; i++ ) {
+        if ( class91[i] === emailUser) {
+            guest = true 
+        }
     }
 
-    if ( class91[i] === emailUser ) {
-        alert('sei nella lista degli invitati')
+    if (guest) {
+        alert('sei invitato')
     } else {
-        alert('non sei invitato, vattene!')
+        alert('non sei invitato')
     }
+    
 });
-
-
-
-
-
-
