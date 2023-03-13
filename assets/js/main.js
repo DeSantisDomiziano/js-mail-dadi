@@ -31,41 +31,35 @@ btnEl.addEventListener('click', function() {
 
     emailUser = document.getElementById('email').value
 
-    let guest = false;
+    //controllo se la mail messa dall'utente è nella mia lista mettendo prima un valore booleano "flase" per poi cambiarlo in "true" nel caso il ciclo for lo tovi nell'array
+    let isGuest = false;
     for( let i = 0; i < class91.length; i++ ) {
         if ( class91[i] === emailUser) {
-            guest = true 
+            isGuest = true 
         }
     }
 
-    if (guest) {
+
+    //se il valore di isGuest è cambiato in "true" allora dirò all'utente che è stato invitato altrimenti gli dirò di no
+    if (isGuest) {
         alert('sei invitato')
+
+        /* 
+            SECONDO ESERCIZIO
+            Generare un numero random da 1 a 6, sia per il giocatore sia per il computer. Stabilire il vincitore, in base a chi fa il punteggio più alto. 
+        */
         const pcNumber = Math.floor(Math.random() * 6) + 1;
         const userNumber = Math.floor(Math.random() * 6) + 1;
+        const playingDice = document.querySelector('button');
+        playingDice.insertAdjacentHTML('afterend', `<h2>Numero del PC: ${pcNumber}</h2><h2>Numero tuo: ${userNumber}</h2>`)
         if (userNumber > pcNumber) {
             alert('hai vinto')
         } else {
             alert('hai perso')
         }
+
     } else {
         alert('non sei invitato')
     }
     
 });
-
-
-/* Generare un numero random da 1 a 6, sia per il giocatore sia per il computer. Stabilire il vincitore, in base a chi fa il punteggio più alto. */
-
-
-/* const pcNumber = Math.floor(Math.random() * 6) + 1;
-console.log(pcNumber, 'pc')
-
-const userNumber = Math.floor(Math.random() * 6) + 1;
-console.log(userNumber, 'utente')
-
-if (userNumber > pcNumber) {
-    alert('hai vinto')
-} else {
-    alert('hai perso')
-} */
-
