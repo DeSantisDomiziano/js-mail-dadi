@@ -4,7 +4,6 @@ Mail Bonus
 Usiamo un input e un bottone per inserire la mail e poi mostriamo i risultati in pagina */
 
 //lista invitati
-
 const class91 = [
     'adam.ben@gmail.com',
     'alessia.bertinato@gmail.com',
@@ -23,4 +22,11 @@ const class91 = [
     'fabio.pacifici@gmail.com',
     'fabrizio.guariglia@gmail.com',
 //siete troppi non metto tutti :)
-]
+];
+
+// prendo la mail dell'utente
+let emailUser;
+const btnEl = document.querySelector('button')
+btnEl.addEventListener('click', function() {
+    emailUser = document.getElementById('email').value
+});
