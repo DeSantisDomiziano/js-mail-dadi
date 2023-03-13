@@ -28,5 +28,23 @@ const class91 = [
 let emailUser;
 const btnEl = document.querySelector('button')
 btnEl.addEventListener('click', function() {
+
     emailUser = document.getElementById('email').value
+
+    let i;
+    for ( let i = 0; i < class91.length; i++) {
+        console.log(class91[i])
+    }
+
+    if ( class91[i] === emailUser ) {
+        alert('sei nella lista degli invitati')
+    } else {
+        alert('non sei invitato, vattene!')
+    }
 });
+
+
+
+
+
+
