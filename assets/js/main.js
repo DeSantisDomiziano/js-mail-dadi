@@ -54,8 +54,10 @@ btnEl.addEventListener('click', function() {
         playingDice.insertAdjacentHTML('afterend', `<h2>Numero del PC: ${pcNumber}</h2><h2>Numero tuo: ${userNumber}</h2>`)
         if (userNumber > pcNumber) {
             alert('hai vinto')
-        } else {
+        } else if (userNumber < pcNumber) {
             alert('hai perso')
+        } else {
+            alert('pareggio')
         }
 
     } else {
